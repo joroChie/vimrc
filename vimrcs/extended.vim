@@ -27,9 +27,13 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
-" Colorscheme
-set background=dark
-colorscheme peaksea
+try
+    "colorscheme apprentice 
+    set termguicolors    
+    colorscheme codedark 
+catch
+endtry
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
