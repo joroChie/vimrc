@@ -81,13 +81,15 @@ set grepprg=/bin/grep\ -nH
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-let g:NERDTreeWinSize=35
+let g:NERDTreeWinSize=33
 
-map <leader>nn :NERDTree<cr>
+set splitright
+set splitbelow
+
+map <leader>nn :NERDTreeFocus<cr>
 map <leader>nt :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
