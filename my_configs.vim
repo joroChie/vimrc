@@ -10,24 +10,34 @@
 nnoremap <silent><leader>re :vertical resize +10<CR>
 " resize reduce
 nnoremap <silent><leader>rr :vertical resize -10<CR>
+" clear search highlights
 nnoremap <silent><leader>cs :noh<CR>
+" highlight current line
+set cursorline
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => 
+" => Command Specific 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "nnoremap <silent><leader>ve :!vim ~/.vim_runtime/my_configs.vim<CR>
 "nnoremap <silent><leader>vs :!source ~/.vim_runtime/my_configs.vim<CR> 
 nnoremap <silent><leader>sh :shell<CR>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:lightline = {
-    \'colorscheme':'codedark',
-    \}
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => 
+" => For NerdTree Bindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set cursorline
+map <C-n> :NERDTree<CR>
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") ==  1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => lightline specific 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:lightline.colorscheme = 'codedark'
+
+
+
 
 ""let g:lightline                  = {}
 "let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}

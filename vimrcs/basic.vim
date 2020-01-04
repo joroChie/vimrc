@@ -330,12 +330,6 @@ map <leader>x :e ~/buffer.md<cr>
 map <leader>pp :setlocal paste!<cr>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => For NerdTree Bindings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-n> :NERDTree<CR>
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") ==  1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
