@@ -27,16 +27,27 @@ nnoremap <silent><leader>sh :shell<CR>
 " => For NerdTree Bindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTree<CR>
-autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree | wincmd w
 autocmd bufenter * if (winnr("$") ==  1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Easygrep Specifics
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>vg :Grep 
+nnoremap <leader>vo :GrepOptions<CR>
+let g:EasyGrepWindowPosition="botright"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => bufExplorer Specifics 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:bufExplorerSortBy = 'number'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline specific 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline.colorscheme = 'codedark'
-
-
 
 
 ""let g:lightline                  = {}
@@ -61,8 +72,6 @@ let g:lightline.colorscheme = 'codedark'
 "nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 "
 "autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
-"
-"
 "
 "set hidden  " allow buffer switching without saving
 "
