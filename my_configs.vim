@@ -1,15 +1,12 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NerdTree Specifics 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nnoremap <silent><leader>nf :NERDTreeFocus<CR>
-
+noremap <Space> <Nop>
+map <Space> <Leader>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI Specific 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " resize expand
-nnoremap <silent><leader>re :vertical resize +10<CR>
+nnoremap <silent><leader>re :vertical resize +25<CR>
 " resize reduce
-nnoremap <silent><leader>rr :vertical resize -10<CR>
+nnoremap <silent><leader>rr :vertical resize -25<CR>
 " clear search highlights
 nnoremap <silent><leader>cs :noh<CR>
 " highlight current line
@@ -21,7 +18,7 @@ set cursorline
 "nnoremap <silent><leader>ve :!vim ~/.vim_runtime/my_configs.vim<CR>
 "nnoremap <silent><leader>vs :!source ~/.vim_runtime/my_configs.vim<CR> 
 nnoremap <silent><leader>sh :shell<CR>
-
+nnoremap <silent><leader>q :q<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => For NerdTree Bindings
@@ -36,8 +33,54 @@ autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | en
 " => Easygrep Specifics
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>vg :Grep 
-nnoremap <leader>vo :GrepOptions<CR>
 let g:EasyGrepWindowPosition="botright"
+"
+""   let g:EasyGrepRoot="cwd"
+""   let g:EasyGrepCommand=0
+     let g:EasyGrepRecursive=1
+""   let g:EasyGrepIgnoreCase=&ignorecase
+""   let g:EasyGrepHidden=0
+""   let g:EasyGrepBinary=0
+     let g:EasyGrepAllOptionsInExplorer=1
+"    let g:EasyGrepWindow=1
+"    let g:EasyGrepOpenWindowOnMatch=0
+"    let g:EasyGrepEveryMatch=0
+     let g:EasyGrepJumpToMatch=0
+""   let g:EasyGrepSearchCurrentBufferDir=1
+""   let g:EasyGrepInvertWholeWord=0
+""   let g:EasyGrepFileAssociationsInExplorer=0
+"
+""if !exists("g:easygrepreplacewindowmode")
+""    let g:EasyGrepReplaceWindowMode=0
+""else
+""    if g:EasyGrepReplaceWindowMode >= s:NumReplaceModeOptions
+""        call EasyGrep#Error("Invalid value for g:EasyGrepReplaceWindowMode")
+""        let g:EasyGrepReplaceWindowMode = 0
+""    endif
+""endif
+"
+"    let g:EasyGrepReplaceAllPerFile=0
+"    let g:EasyGrepExtraWarnings=0
+"    let g:EasyGrepWindowPosition="belowright"
+""    let w = g:EasyGrepWindowPosition
+""    if w != ""
+""\   && w != "vertical"
+""\   && w != "leftabove"
+""\   && w != "aboveleft"
+""\   && w != "rightbelow"
+""\   && w != "belowright"
+""\   && w != "topleft"
+""\   && w != "botright"
+""       call EasyGrep#Error("Invalid position specified in g:EasyGrepWindowPosition")
+""       let g:EasyGrepWindowPosition=""
+""   endif
+""endif
+"
+""    let g:EasyGrepFilesToInclude=""
+""    let g:EasyGrepFilesToExclude="*.swp,*~"
+""    let g:EasyGrepPatternType="regex"
+""    let g:EasyGrepSearchCurrentBufferOnly=0
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
