@@ -1,8 +1,5 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NerdTree Specifics 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nnoremap <silent><leader>nf :NERDTreeFocus<CR>
-
+noremap <Space> <Nop>
+map <Space> <Leader>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI Specific 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -21,7 +18,7 @@ set cursorline
 "nnoremap <silent><leader>ve :!vim ~/.vim_runtime/my_configs.vim<CR>
 "nnoremap <silent><leader>vs :!source ~/.vim_runtime/my_configs.vim<CR> 
 nnoremap <silent><leader>sh :shell<CR>
-
+nnoremap <silent><leader>q :q<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => For NerdTree Bindings
