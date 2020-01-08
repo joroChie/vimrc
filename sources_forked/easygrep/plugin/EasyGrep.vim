@@ -2232,7 +2232,7 @@ function! s:ReplaceUndo()
                         " open
                         if index(bufList, thisFile) == -1
                             if lastFile != -1
-                                tabnew
+                               tabnew
                             endif
                             if g:EasyGrepWindow == 0
                                 execute g:EasyGrepWindowPosition." copen"
@@ -3085,7 +3085,7 @@ function! s:DoReplace(target, replacement, wholeword, escapeArgs)
                     " only open a new tab when the window doesn't already exist
                     if index(bufList, thisFile) == -1
                         if lastFile != -1
-                            tabnew
+                           tabnew
                         endif
                         if g:EasyGrepWindow == 0
                             execute g:EasyGrepWindowPosition." copen"
@@ -3313,7 +3313,7 @@ function! s:ResultListOpen(...)
     let lastbnum = -1
     for item in lst
         if item.bufnr != lastbnum
-            exe "tabnew ".bufname(item.bufnr)
+            exe "tabnew ".bufname(item.bufnr) 
             let lastbnum = item.bufnr
         endif
     endfor
@@ -3365,7 +3365,7 @@ function! s:ResultListDo(command)
                     " only open a new tab when the window doesn't already exist
                     if index(bufList, thisFile) == -1
                         if lastFile != -1
-                            tabnew
+                           tabnew
                         endif
                         if g:EasyGrepWindow == 0
                             execute g:EasyGrepWindowPosition." copen"
