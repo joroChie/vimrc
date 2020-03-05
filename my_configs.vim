@@ -11,6 +11,7 @@ nnoremap <silent><leader>rr :vertical resize -25<CR>
 nnoremap <silent><leader>cs :noh<CR>
 " highlight current line
 set cursorline
+" hide crlf characters
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command Specific 
@@ -26,7 +27,7 @@ nnoremap <silent><leader>q :q<CR>
 map <C-n> :NERDTree<CR>
 autocmd vimenter * NERDTree | wincmd w
 autocmd bufenter * if (winnr("$") ==  1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
+autocmd BufEnter * if bufname('#') =~# "NERD_tree_" && winnr('$') > 1 | b# | endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
