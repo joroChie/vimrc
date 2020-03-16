@@ -31,6 +31,17 @@ autocmd BufEnter * if bufname('#') =~# "NERD_tree_" && winnr('$') > 1 | b# | end
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => For ctrlP 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"let g:ctrlp_custom_ignore = '\v[\/](release|obj)|(\.(swp|ico|git|svn))$'
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)|\v[\/](obj|release)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Easygrep Specifics
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>vg :Grep 
