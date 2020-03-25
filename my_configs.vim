@@ -22,10 +22,17 @@ nnoremap <silent><leader>sh :shell<CR>
 nnoremap <silent><leader>q :q<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntax highlighting 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufRead *.aph set syntax=c
+autocmd BufNewFile,BufRead *.apg set syntax=c
+autocmd BufNewFile,BufRead *.os6 set syntax=c
+autocmd BufNewFile,BufRead *.ax6 set syntax=c
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => For NerdTree Bindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-n> :NERDTree<CR>
-autocmd vimenter * NERDTree | wincmd w
+"autocmd vimenter * NERDTree | wincmd w
 autocmd bufenter * if (winnr("$") ==  1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd BufEnter * if bufname('#') =~# "NERD_tree_" && winnr('$') > 1 | b# | endif
 
