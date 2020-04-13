@@ -9,9 +9,12 @@ nnoremap <silent><leader>re :vertical resize +25<CR>
 nnoremap <silent><leader>rr :vertical resize -25<CR>
 " clear search highlights
 nnoremap <silent><leader>cs :noh<CR>
-" highlight current line
-set cursorline
-" hide crlf characters
+" highlight current line in active window
+augroup CursorLineOnlyInActiveWindow
+  autocmd!
+  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
+augroup END  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command Specific 
