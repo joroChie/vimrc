@@ -39,6 +39,19 @@ autocmd BufNewFile,BufRead *.ax6 set syntax=c
 autocmd bufenter * if (winnr("$") ==  1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd BufEnter * if bufname('#') =~# "NERD_tree_" && winnr('$') > 1 | b# | endif
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => For NerdTree Bindings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+
+let g:UltiSnipsExpandTrigger="<S-tab>"
+imap <s-tab> <Plug>snipMateTrigger
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => For ctrlP 
